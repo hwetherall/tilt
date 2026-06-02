@@ -174,7 +174,7 @@ This is the highest-risk dependency. Time-box it.
 2. **Spike day (one calendar day, Next Steps #3):** Time-boxed Playwright spike — try to log in and capture the ratings/projections table. **Hard stop at end of the day.**
 3. **If scrape works by end of spike day:** wire as data source for the dossier. Capture once daily; cache as JSON.
 4. **If scrape doesn't work by end of spike day:** **Fall back to manual paste.** Harry copies the relevant PELE numbers into `/data/pele-snapshot.json` once a day (5-10 min effort) before running `npm run generate`. Sustainable for 40 days and removes all scrape-fragility risk.
-5. **If Silver Bulletin signals concern (DMCA, email, blocked IP) at any point:** drop PELE as a primary source. Use FiveThirtyEight's old SPI CSV from GitHub as a static historical anchor + Odds API as the live engine. Document this as the "Plan C" and don't agonise over it.
+
 
 **Decision rule:** the show ships even if PELE access fails entirely. The Odds API + web search + Harry's takes is the minimum viable product. PELE is a credibility amplifier, not a load-bearing dependency.
 
@@ -209,12 +209,10 @@ What we don't copy: the orchestrator, the section-agent multi-wave system, the v
 ## Open Questions
 
 1. **Name.** "Tilt," "Pele Overwatch," "Keepwatch v2," "Road to Europe," or something else. Pick before creating the repo — undoing the repo name is painful.
-2. **PELE scrape legality / robustness.** Silver Bulletin ToS not checked. Worth a polite email to Silver Bulletin asking permission, or limiting to non-paywalled public data and supplementing with Odds API for live signal. Risk if not addressed: legal grey area + breakage on Silver Bulletin redesign. **Note:** the fallback in Recommended Approach removes this from the critical path, but the question still wants an answer.
-3. **Publishing posture for PELE-derived numbers.** Even if scrape works, publishing PELE figures with commentary on a public YouTube channel is a separate question from scraping for personal use. Recommendation: **email Silver Bulletin before episode 1** with a one-paragraph note describing the show, attribution plan, and audience size estimate. Quote-and-comment fair use covers most of this but a friendly email pre-empts friction.
-4. **YouTube channel identity.** New channel, or existing one? Branded as Harry personally or as Tilt/Pele Overwatch? Affects thumbnail/SEO strategy from episode 1.
-5. **Recording / editing workflow.** Capcut vs OBS vs simpler tool. Editing time per episode is a real cost — pilot one this week and measure (see Next Steps step 9).
-6. **What happens day 4 when Harry has food poisoning?** Pre-record a fallback "model snapshot" episode? Auto-skip days with a holding screen? Decide this *before* it happens, ideally during the dress rehearsal.
-7. **Tournament-end plan.** July 19 is the WC final. What's the product life after that? Sunset, or pivot to "Tilt EPL" for the 2026-27 season?
+2. **YouTube channel identity.** New channel, or existing one? Branded as Harry personally or as Tilt/Pele Overwatch? Affects thumbnail/SEO strategy from episode 1.
+3. **Recording / editing workflow.** Capcut vs OBS vs simpler tool. Editing time per episode is a real cost — pilot one this week and measure (see Next Steps step 9).
+4. **What happens day 4 when Harry has food poisoning?** Pre-record a fallback "model snapshot" episode? Auto-skip days with a holding screen? Decide this *before* it happens, ideally during the dress rehearsal.
+5. **Tournament-end plan.** July 19 is the WC final. What's the product life after that? Sunset, or pivot to "Tilt EPL" for the 2026-27 season?
 
 ---
 
@@ -265,14 +263,13 @@ This is the build sequence. Each step ships something and validates the next.
 10. **Pilot recording (the "tape test").** Record yourself reading the script in OBS. Cut in Capcut. Watch alone. The tape decides. (2 hours)
 11. **If the tape works: iterate on prompt + dossier based on what it revealed.** (1-2 days)
 12. **Dress rehearsal: record 3 episodes back-to-back during the week of June 1.** Use real international fixtures as stand-ins. Measure actual end-to-end time per episode (the daily-time-budget success criterion). Decide if 40 episodes is realistic or whether the target should drop to ~25 (matchdays + key rest days). (1 day)
-13. **Email Silver Bulletin** with the publishing-posture note before episode 1. Friendly, short, attribution-forward. (30 min)
-14. **Kick off daily cadence June 11.**
+13. **Kick off daily cadence June 11.**
 
 ---
 
 ## The Assignment
 
-**By end of next Wednesday (May 27), record and watch back one pilot episode of Tilt — generated end-to-end by the tool, read by Harry, edited in Capcut, watched alone in a quiet room.**
+**By end of next Wednesday (May 27), record and watch back one pilot episode of Tilt — generated end-to-end by the tool, read by Harry, edited in Kapwing, watched alone in a quiet room.**
 
 Not published. Not shown to mates. Just watched. The tape tells you whether the whole pivot is real. If it feels good, ship the rest. If it doesn't, you've burned 8 days and avoided 5 weeks of grinding a format that wasn't working.
 
