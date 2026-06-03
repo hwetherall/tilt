@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Skill(plan-ceo-review)",
-      "Skill(plan-eng-review)"
+      "Skill(plan-eng-review)",
+      "Skill(office-hours)"
     ]
   }
 }
